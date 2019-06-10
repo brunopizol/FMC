@@ -22,6 +22,10 @@ int resposta7[11];
 int resposta8[20];
 
 void show_graphs(char *graph_path);
+void populate_graphs(int graph_number);
+void show_populate(int graph);
+int parseTheAnswer(char *resposta, int phase);
+int checkAnswer(int phase);
 
 
 
@@ -323,7 +327,7 @@ void show_populate(int graph)
     }
 }
 
-//concatena a resposta removendo pontos, virgulas e espacos e adiciona
+//concatena a resposta removendo pontos, virgulas e espacos e adiciona em vetor de inteiros
 int parseTheAnswer(char *resposta, int phase)
 {
 
@@ -440,7 +444,7 @@ int parseTheAnswer(char *resposta, int phase)
 
 }
 
-
+//verifica a sequencia concatenada informada pelo usuario se confere com a matriz
 int checkAnswer(int phase){
     int i,j;
 
@@ -448,16 +452,19 @@ int checkAnswer(int phase){
     case 1:
         for(i=0; i<=3;i++){
                 printf("\n valor de i: %d", i);
-                if(graph_1[resposta1[i]-1][resposta1[i+1]-1]==1){
+                if(graph_1[resposta1[i]-1][resposta1[i+1]-1]==1){ //se houver arestas interligando as cidades e adicionado 2 na matriz
                 printf("\n.");
-                printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
+                graph_1[resposta1[i]-1][resposta1[i+1]-1]=2;
+                graph_1[resposta1[i+1]-1][resposta1[i]-1]=2;    //é adicionado 2 tambem no caminho oposto para que nao possa voltar pelo mesmo caminho
+                return 1;
+                //printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
                 }else{
 
-                    printf("\nerrou");
-                printf("\n valor de i: %d", i);
+                    /*printf("\nerrou");
+                    printf("\n valor de i: %d", i);
                     printf("\nvalor de resposta: %d",resposta1[i]-1);
                     printf("\nvalor de resposta+1: %d",resposta1[i+1]-1);
-                    printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
+                    printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);*/
                 return 0;
                 }
             // 1 3 4 5
@@ -465,25 +472,155 @@ int checkAnswer(int phase){
 
     break;
     case 2:
+           for(i=0; i<=4;i++){
+                printf("\n valor de i: %d", i);
+                if(graph_2[resposta2[i]-1][resposta2[i+1]-1]==1){ //se houver arestas interligando as cidades e adicionado 2 na matriz
+                printf("\n.");
+                graph_2[resposta2[i]-1][resposta2[i+1]-1]=2;
+                graph_2[resposta2[i+1]-1][resposta2[i]-1]=2;    //é adicionado 2 tambem no caminho oposto para que nao possa voltar pelo mesmo caminho
+                return 1;
+                //printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
+                }else{
 
+                    /*printf("\nerrou");
+                    printf("\n valor de i: %d", i);
+                    printf("\nvalor de resposta: %d",resposta1[i]-1);
+                    printf("\nvalor de resposta+1: %d",resposta1[i+1]-1);
+                    printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);*/
+                return 0;
+                }
+            // 1 3 4 5
+        }
     break;
     case 3:
+                   for(i=0; i<=5;i++){
+                printf("\n valor de i: %d", i);
+                if(graph_3[resposta3[i]-1][resposta3[i+1]-1]==1){ //se houver arestas interligando as cidades e adicionado 2 na matriz
+                printf("\n.");
+                graph_3[resposta3[i]-1][resposta3[i+1]-1]=2;
+                graph_3[resposta3[i+1]-1][resposta3[i]-1]=2;    //é adicionado 2 tambem no caminho oposto para que nao possa voltar pelo mesmo caminho
+                return 1;
+                //printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
+                }else{
+
+                    /*printf("\nerrou");
+                    printf("\n valor de i: %d", i);
+                    printf("\nvalor de resposta: %d",resposta1[i]-1);
+                    printf("\nvalor de resposta+1: %d",resposta1[i+1]-1);
+                    printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);*/
+                return 0;
+                }
+            // 1 3 4 5
+        }
 
     break;
     case 4:
+                           for(i=0; i<=5;i++){
+                printf("\n valor de i: %d", i);
+                if(graph_4[resposta4[i]-1][resposta4[i+1]-1]==1){ //se houver arestas interligando as cidades e adicionado 2 na matriz
+                printf("\n.");
+                graph_4[resposta4[i]-1][resposta4[i+1]-1]=2;
+                graph_4[resposta4[i+1]-1][resposta4[i]-1]=2;    //é adicionado 2 tambem no caminho oposto para que nao possa voltar pelo mesmo caminho
+                return 1;
+                //printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
+                }else{
+
+                    /*printf("\nerrou");
+                    printf("\n valor de i: %d", i);
+                    printf("\nvalor de resposta: %d",resposta1[i]-1);
+                    printf("\nvalor de resposta+1: %d",resposta1[i+1]-1);
+                    printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);*/
+                return 0;
+                }
+            // 1 3 4 5
+        }
 
     break;
     case 5:
+                           for(i=0; i<=7;i++){
+                printf("\n valor de i: %d", i);
+                if(graph_5[resposta5[i]-1][resposta5[i+1]-1]==1){ //se houver arestas interligando as cidades e adicionado 2 na matriz
+                printf("\n.");
+                graph_5[resposta5[i]-1][resposta5[i+1]-1]=2;
+                graph_5[resposta5[i+1]-1][resposta5[i]-1]=2;    //é adicionado 2 tambem no caminho oposto para que nao possa voltar pelo mesmo caminho
+                return 1;
+                //printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
+                }else{
+
+                    /*printf("\nerrou");
+                    printf("\n valor de i: %d", i);
+                    printf("\nvalor de resposta: %d",resposta1[i]-1);
+                    printf("\nvalor de resposta+1: %d",resposta1[i+1]-1);
+                    printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);*/
+                return 0;
+                }
+            // 1 3 4 5
+        }
 
     break;
     case 6:
+        for(i=0; i<=7;i++){
+                printf("\n valor de i: %d", i);
+                if(graph_6[resposta6[i]-1][resposta6[i+1]-1]==1){ //se houver arestas interligando as cidades e adicionado 2 na matriz
+                printf("\n.");
+                graph_6[resposta6[i]-1][resposta6[i+1]-1]=2;
+                graph_6[resposta6[i+1]-1][resposta6[i]-1]=2;    //é adicionado 2 tambem no caminho oposto para que nao possa voltar pelo mesmo caminho
+                return 1;
+                //printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
+                }else{
+
+                    /*printf("\nerrou");
+                    printf("\n valor de i: %d", i);
+                    printf("\nvalor de resposta: %d",resposta1[i]-1);
+                    printf("\nvalor de resposta+1: %d",resposta1[i+1]-1);
+                    printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);*/
+                return 0;
+                }
+            // 1 3 4 5
+        }
 
     break;
     case 7:
+for(i=0; i<=10;i++){
+                printf("\n valor de i: %d", i);
+                if(graph_7[resposta7[i]-1][resposta7[i+1]-1]==1){ //se houver arestas interligando as cidades e adicionado 2 na matriz
+                printf("\n.");
+                graph_7[resposta7[i]-1][resposta7[i+1]-1]=2;
+                graph_7[resposta7[i+1]-1][resposta7[i]-1]=2;    //é adicionado 2 tambem no caminho oposto para que nao possa voltar pelo mesmo caminho
+                return 1;
+                //printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
+                }else{
 
+                    /*printf("\nerrou");
+                    printf("\n valor de i: %d", i);
+                    printf("\nvalor de resposta: %d",resposta1[i]-1);
+                    printf("\nvalor de resposta+1: %d",resposta1[i+1]-1);
+                    printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);*/
+                return 0;
+                }
+            // 1 3 4 5
+        }
     break;
     case 8:
+for(i=0; i<=19;i++){
+                printf("\n valor de i: %d", i);
+                if(graph_8[resposta8[i]-1][resposta8[i+1]-1]==1){ //se houver arestas interligando as cidades e adicionado 2 na matriz
+                printf("\n.");
+                graph_8[resposta8[i]-1][resposta8[i+1]-1]=2;
+                graph_8[resposta5[i+1]-1][resposta8[i]-1]=2;    //é adicionado 2 tambem no caminho oposto para que nao possa voltar pelo mesmo caminho
+                return 1;
+                //printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
+                }else{
 
+                    /*printf("\nerrou");
+                    printf("\n valor de i: %d", i);
+                    printf("\nvalor de resposta: %d",resposta1[i]-1);
+                    printf("\nvalor de resposta+1: %d",resposta1[i+1]-1);
+                    printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);*/
+                return 0;
+                }
+            // 1 3 4 5
+        }
     break;
 
     }
