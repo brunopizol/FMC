@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int graph_1[4][4];
+int graph_2[5][5];
+int graph_3[6][6];
+int graph_4[8][8];
+int graph_5[20][20];
+
+void *start_graph_1(){
+
+
+
+}
+
+int main(){
+
+
+
+
+
+
+
+
+
+
+
+
+}
