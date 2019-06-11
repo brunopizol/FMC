@@ -9,20 +9,20 @@
 
     --RESUMO: Neste jogo voce deve ajudar os correios a nao serem privatizados coordenando
     rotas entre as cidades presentes em cada vertice dos grafos. O jogo ira mostrar um grafo
-    e voce deverá inserir a ordem dos vertices(seperados por virgula somente) com objetivo de
+    e voce devera inserir a ordem dos vertices(seperados por virgula somente) com objetivo de
     formar um ciclo hamiltoniano.
 
 
 
     --FUNCIONAMENTO: O jogo utiliza de txt's com desenhos feitos em ASCII para formar toda a interface
-    grafica, as matrizes de cada grafo tambem se encontram em txt's, a aplicação lê esses txt's, adiciona
-    em matrizes e as utiliza para fazer comparação entre as coordenadas.
+    grafica, as matrizes de cada grafo tambem se encontram em txt's, a aplicacao lê esses txt's, adiciona
+    em matrizes e as utiliza para fazer comparacao entre as coordenadas.
 
 
 
-    --OBSERVAÇÕES: Professor espero que o senhor considere ao maximo o trabalho, pois eu preciso de muito
-    ponto para passar e eu preciso formar até o final do ano e FMC bate grade com as materias que ainda
-    faltam, entao peço que o senhor corrija com o coração.
+    --OBSERVACOES: Professor espero que o senhor considere ao maximo o trabalho, pois eu preciso de muito
+    ponto para passar e eu preciso formar ate o final do ano e FMC bate grade com as materias que ainda
+    faltam, entao peco que o senhor corrija com o coracao.
 
 
 
@@ -82,11 +82,11 @@ int main()
     show_graphs("inicio.text");
     getchar();
     ///system("clear");    //linux clear screen function
-    system("CLS");         // windows clear screen function
+    ///system("CLS");         // windows clear screen function
     show_graphs("intro.text");
     getchar();
     ///system("clear");    //linux clear screen function
-    system("CLS");         // windows clear screen function
+    ///system("CLS");         // windows clear screen function
 
 
 
@@ -106,9 +106,10 @@ int main()
     {
         checkLength=0;
         populate_graphs(1); //inicia a matriz do grafo
+        printf("\nDetermine um caminho entre 1 e 4: ");
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph1.txt"); //mostra o grafo
-        printf("\nDetermine um caminho entre 1 e 4: ");
+
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,1);
         if(checkLength>=6)
@@ -131,8 +132,8 @@ int main()
     }
     while(End_of_level[1]==0);
 
+getchar();
     ///system("clear");    //linux clear screen function
-    getchar();
     ///system("CLS");         // windows clear screen function
 
 ///.................................................................................
@@ -142,9 +143,10 @@ int main()
     {
         checkLength=0;
         populate_graphs(2); //inicia a matriz do grafo
+        printf("\nDetermine um caminho entre 1 e 5: ");
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph2.txt"); //mostra o grafo
-        printf("\nDetermine um caminho entre 1 e 5: ");
+
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,2);
         if(checkLength>=7)
@@ -167,8 +169,9 @@ int main()
     }
     while(End_of_level[2]==0);
 
-///system("clear");    //linux clear screen function
+
     getchar();
+    ///system("clear");    //linux clear screen function
     ///system("CLS");         // windows clear screen function
 ///.................................................................................
 
@@ -177,9 +180,10 @@ int main()
     {
         checkLength=0;
         populate_graphs(3); //inicia a matriz do grafo
+        printf("\nDetermine um caminho entre 1 e 6: ");
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph3.txt"); //mostra o grafo
-        printf("\nDetermine um caminho entre 1 e 6: ");
+
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,3);
         if(checkLength>=8)
@@ -202,8 +206,8 @@ int main()
     }
     while(End_of_level[3]==0);
 
-///system("clear");    //linux clear screen function
-    getchar();
+getchar();
+    ///system("clear");    //linux clear screen function
     ///system("CLS");         // windows clear screen function
 ///.................................................................................
 
@@ -212,9 +216,10 @@ int main()
     {
         checkLength=0;
         populate_graphs(4); //inicia a matriz do grafo
+        printf("\nDetermine um caminho entre 1 e 6: ");
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph4.txt"); //mostra o grafo
-        printf("\nDetermine um caminho entre 1 e 6: ");
+
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,4);
         if(checkLength>=8)
@@ -237,8 +242,8 @@ int main()
     }
     while(End_of_level[4]==0);
 
-///system("clear");    //linux clear screen function
-    getchar();
+getchar();
+    ///system("clear");    //linux clear screen function
     ///system("CLS");         // windows clear screen function
 ///.................................................................................
 
@@ -247,9 +252,10 @@ int main()
     {
         checkLength=0;
         populate_graphs(5); //inicia a matriz do grafo
+        printf("\nDetermine um caminho entre 1 e 8: ");
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph5.txt"); //mostra o grafo
-        printf("\nDetermine um caminho entre 1 e 8: ");
+
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,5);
         if(checkLength>=10)
@@ -272,8 +278,8 @@ int main()
     }
     while(End_of_level[5]==0);
 
-///system("clear");    //linux clear screen function
-    getchar();
+getchar();
+    ///system("clear");    //linux clear screen function
     ///system("CLS");         // windows clear screen function
 ///.................................................................................
 
@@ -282,9 +288,10 @@ int main()
     {
         checkLength=0;
         populate_graphs(6); //inicia a matriz do grafo
+        printf("\nDetermine um caminho entre 1 e 8: ");
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph6.txt"); //mostra o grafo
-        printf("\nDetermine um caminho entre 1 e 8: ");
+
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,6);
         if(checkLength>=10)
@@ -307,8 +314,8 @@ int main()
     }
     while(End_of_level[6]==0);
 
-///system("clear");    //linux clear screen function
-    getchar();
+getchar();
+    ///system("clear");    //linux clear screen function
     ///system("CLS");         // windows clear screen function
 ///.................................................................................
 
@@ -318,10 +325,11 @@ int main()
     {
         checkLength=0;
         populate_graphs(7); //inicia a matriz do grafo
-        show_populate(7);
+        printf("\nDetermine um caminho entre 1 e 6: ");
+        //show_populate(7);
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph7.txt"); //mostra o grafo
-        printf("\nDetermine um caminho entre 1 e 6: ");
+
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,7);
         if(checkLength>=8)
@@ -344,10 +352,9 @@ int main()
     }
     while(End_of_level[7]==0);
 
-///system("clear");    //linux clear screen function
-    getchar();
-    /// system("CLS");         // windows clear screen function
-///.................................................................................
+getchar();
+    ///system("clear");    //linux clear screen function
+    ///system("CLS");         // windows clear screen function...................
 
 
 
@@ -356,9 +363,10 @@ int main()
     {
         checkLength=0;
         populate_graphs(8); //inicia a matriz do grafo
+        printf("\nDetermine um caminho entre 1 e 20: ");
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph8.txt"); //mostra o grafo
-        printf("\nDetermine um caminho entre 1 e 20: ");
+
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,8);
         if(checkLength>=22)
@@ -381,8 +389,8 @@ int main()
     }
     while(End_of_level[8]==0);
 
-///system("clear");    //linux clear screen function
-    getchar();
+getchar();
+    ///system("clear");    //linux clear screen function
     ///system("CLS");         // windows clear screen function
 ///.................................................................................
 
