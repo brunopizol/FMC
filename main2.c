@@ -29,7 +29,8 @@ respostas rapidas para teste:
     - 4: 1,6,4,3,2,5,1
     - 5: 1,4,6,3,2,8,7,5,1
     - 6: 1,6,5,4,7,8,3,2,1
-    - 7:
+    - 7: 1,2,6,4,5,3,1
+    - 9: 1,2,3,10,9,8,7,17,18,19,11,12,4,5,14,13,20,16,15,6,1
 **/
 
 
@@ -46,7 +47,7 @@ int graph_3[6][6];
 int graph_4[6][6];
 int graph_5[8][8];
 int graph_6[8][8];
-int graph_7[11][11];
+int graph_7[6][6];
 int graph_8[20][20];
 
 int resposta1[4];
@@ -306,18 +307,19 @@ int main()
     ///system("CLS");         // windows clear screen function
 ///.................................................................................
 
-
+    show_populate(7);
     ///-------------------- level 7 ---------------------------------------------
     do
     {
         checkLength=0;
         populate_graphs(7); //inicia a matriz do grafo
+        show_populate(7);
         memset(getResposta, '\0', sizeof(getResposta));
-        show_graphs("teste.txt"); //mostra o grafo
-        printf("\nDtermine um caminho entre 1 e 11: ");
+        show_graphs("graph7.txt"); //mostra o grafo
+        printf("\nDtermine um caminho entre 1 e 6: ");
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,7);
-        if(checkLength>=12)
+        if(checkLength>=8)
         {
             printf("\nVoce informou mais cidades que o necessario! Tente novmante.\n");
         }
@@ -499,9 +501,9 @@ void populate_graphs(int graph_number)
         break;
     case 7:
         pFile = fopen("graph_7.text", "r");
-        for (int i = 0; i < 11; i++)
+        for (int i = 0; i < 6; i++)
         {
-            for (int j = 0; j < 11; j++)
+            for (int j = 0; j < 6; j++)
             {
                 fscanf(pFile, "%d", &graph_7[i][j]);
             }
@@ -614,9 +616,9 @@ void show_populate(int graph)
         break;
     case 7:
 
-        for (int i = 0; i < 11; i++)
+        for (int i = 0; i < 6; i++)
         {
-            for (int j = 0; j < 11; j++)
+            for (int j = 0; j < 6; j++)
             {
                 printf("%d", graph_7[i][j]);
             }
@@ -927,25 +929,25 @@ int checkAnswer(int level)
 
         break;
     case 7:
-        for(i=0; i<=10; i++)
+        for(i=0; i<=5; i++)
         {
            //printf("\n valor de i: %d", i);
             if(graph_7[resposta7[i]-1][resposta7[i+1]-1]==1)  //se houver arestas interligando as cidades e adicionado 2 na matriz
             {
-                //printf("\n.");
+                printf("\n.");
                 graph_7[resposta7[i]-1][resposta7[i+1]-1]=2;
                 graph_7[resposta7[i+1]-1][resposta7[i]-1]=2;    //é adicionado 2 tambem no caminho oposto para que nao possa voltar pelo mesmo caminho
                 resposta= 1;
-                //printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
+                printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
             }
             else
             {
 
-                /*printf("\nerrou");
+                printf("\nerrou");
                //printf("\n valor de i: %d", i);
                 printf("\nvalor de resposta: %d",resposta1[i]-1);
                 printf("\nvalor de resposta+1: %d",resposta1[i+1]-1);
-                printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);*/
+                printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
                 return 0;
             }
             // 1 3 4 5
