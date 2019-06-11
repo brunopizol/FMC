@@ -1,24 +1,28 @@
-/**
+/** --------------------------------------------------------------------------------------
+
+                        ---------- TRABALLHO DE FMC -------------
 
 
 
+    AUTOR: Bruno Pizol Camargo
+
+
+    --RESUMO: Neste jogo voce deve ajudar os correios a nao serem privatizados coordenando
+    rotas entre as cidades presentes em cada vertice dos grafos. O jogo ira mostrar um grafo
+    e voce deverá inserir a ordem dos vertices(seperados por virgula somente) com objetivo de
+    formar um ciclo hamiltoniano.
 
 
 
+    --FUNCIONAMENTO: O jogo utiliza de txt's com desenhos feitos em ASCII para formar toda a interface
+    grafica, as matrizes de cada grafo tambem se encontram em txt's, a aplicação lê esses txt's, adiciona
+    em matrizes e as utiliza para fazer comparação entre as coordenadas.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+    --OBSERVAÇÕES: Professor espero que o senhor considere ao maximo o trabalho, pois eu preciso de muito
+    ponto para passar e eu preciso formar até o final do ano e FMC bate grade com as materias que ainda
+    faltam, entao peço que o senhor corrija com o coração.
 
 
 
@@ -38,6 +42,7 @@ respostas rapidas para teste:
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 
@@ -103,7 +108,7 @@ int main()
         populate_graphs(1); //inicia a matriz do grafo
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph1.txt"); //mostra o grafo
-        printf("\nDtermine um caminho entre 1 e 4: ");
+        printf("\nDetermine um caminho entre 1 e 4: ");
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,1);
         if(checkLength>=6)
@@ -116,7 +121,7 @@ int main()
         }
         if(End_of_level[1]==1)
         {
-            printf("\nParabens!! Voce acertou.\n");
+            printf("\n------- Parabens!! Voce acertou----------.\n");
         }
         else
         {
@@ -139,7 +144,7 @@ int main()
         populate_graphs(2); //inicia a matriz do grafo
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph2.txt"); //mostra o grafo
-        printf("\nDtermine um caminho entre 1 e 5: ");
+        printf("\nDetermine um caminho entre 1 e 5: ");
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,2);
         if(checkLength>=7)
@@ -152,7 +157,7 @@ int main()
         }
         if(End_of_level[2]==1)
         {
-            printf("\nParabens!! Voce acertou.\n");
+            printf("\n------- Parabens!! Voce acertou----------.\n");
         }
         else
         {
@@ -174,7 +179,7 @@ int main()
         populate_graphs(3); //inicia a matriz do grafo
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph3.txt"); //mostra o grafo
-        printf("\nDtermine um caminho entre 1 e 6: ");
+        printf("\nDetermine um caminho entre 1 e 6: ");
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,3);
         if(checkLength>=8)
@@ -187,7 +192,7 @@ int main()
         }
         if(End_of_level[3]==1)
         {
-            printf("\nParabens!! Voce acertou.\n");
+            printf("\n------- Parabens!! Voce acertou----------.\n");
         }
         else
         {
@@ -209,7 +214,7 @@ int main()
         populate_graphs(4); //inicia a matriz do grafo
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph4.txt"); //mostra o grafo
-        printf("\nDtermine um caminho entre 1 e 6: ");
+        printf("\nDetermine um caminho entre 1 e 6: ");
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,4);
         if(checkLength>=8)
@@ -222,7 +227,7 @@ int main()
         }
         if(End_of_level[4]==1)
         {
-            printf("\nParabens!! Voce acertou.\n");
+            printf("\n------- Parabens!! Voce acertou----------.\n");
         }
         else
         {
@@ -244,7 +249,7 @@ int main()
         populate_graphs(5); //inicia a matriz do grafo
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph5.txt"); //mostra o grafo
-        printf("\nDtermine um caminho entre 1 e 8: ");
+        printf("\nDetermine um caminho entre 1 e 8: ");
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,5);
         if(checkLength>=10)
@@ -257,7 +262,7 @@ int main()
         }
         if(End_of_level[5]==1)
         {
-            printf("\nParabens!! Voce acertou.\n");
+            printf("\n------- Parabens!! Voce acertou----------.\n");
         }
         else
         {
@@ -279,7 +284,7 @@ int main()
         populate_graphs(6); //inicia a matriz do grafo
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph6.txt"); //mostra o grafo
-        printf("\nDtermine um caminho entre 1 e 8: ");
+        printf("\nDetermine um caminho entre 1 e 8: ");
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,6);
         if(checkLength>=10)
@@ -292,7 +297,7 @@ int main()
         }
         if(End_of_level[6]==1)
         {
-            printf("\nParabens!! Voce acertou.\n");
+            printf("\n------- Parabens!! Voce acertou----------.\n");
         }
         else
         {
@@ -316,7 +321,7 @@ int main()
         show_populate(7);
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph7.txt"); //mostra o grafo
-        printf("\nDtermine um caminho entre 1 e 6: ");
+        printf("\nDetermine um caminho entre 1 e 6: ");
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,7);
         if(checkLength>=8)
@@ -329,7 +334,7 @@ int main()
         }
         if(End_of_level[7]==1)
         {
-            printf("\nParabens!! Voce acertou.\n");
+            printf("\n------- Parabens!! Voce acertou----------.\n");
         }
         else
         {
@@ -353,7 +358,7 @@ int main()
         populate_graphs(8); //inicia a matriz do grafo
         memset(getResposta, '\0', sizeof(getResposta));
         show_graphs("graph8.txt"); //mostra o grafo
-        printf("\nDtermine um caminho entre 1 e 20: ");
+        printf("\nDetermine um caminho entre 1 e 20: ");
         scanf("%s", getResposta);
         checkLength=parseTheAnswer(getResposta,8);
         if(checkLength>=22)
@@ -366,7 +371,7 @@ int main()
         }
         if(End_of_level[8]==1)
         {
-            printf("\nParabens!! Voce acertou.\n");
+            printf("\n------- Parabens!! Voce acertou----------.\n");
         }
         else
         {
@@ -932,22 +937,22 @@ int checkAnswer(int level)
         for(i=0; i<=5; i++)
         {
            //printf("\n valor de i: %d", i);
-            if(graph_7[resposta7[i]-1][resposta7[i+1]-1]==1)  //se houver arestas interligando as cidades e adicionado 2 na matriz
+            if(graph_7[resposta7[i]-1][resposta7[i+1]-1]==1)  ///se houver arestas interligando as cidades e adicionado 2 na matriz
             {
-                printf("\n.");
+               // printf("\n.");
                 graph_7[resposta7[i]-1][resposta7[i+1]-1]=2;
-                graph_7[resposta7[i+1]-1][resposta7[i]-1]=2;    //é adicionado 2 tambem no caminho oposto para que nao possa voltar pelo mesmo caminho
+                graph_7[resposta7[i+1]-1][resposta7[i]-1]=2;    ///é adicionado 2 tambem no caminho oposto para que nao possa voltar pelo mesmo caminho
                 resposta= 1;
-                printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
+               // printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
             }
             else
             {
 
                 printf("\nerrou");
                //printf("\n valor de i: %d", i);
-                printf("\nvalor de resposta: %d",resposta1[i]-1);
+                /*printf("\nvalor de resposta: %d",resposta1[i]-1);
                 printf("\nvalor de resposta+1: %d",resposta1[i+1]-1);
-                printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);
+                printf("\nvalor de[%d][%d] : %d" ,resposta1[i]-1,resposta1[i+1]-1, graph_1[resposta1[i]-1][resposta1[i+1]-1]);*/
                 return 0;
             }
             // 1 3 4 5
