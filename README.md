@@ -2,5 +2,5 @@
 Graph work made for the discipline of mathematical fundamentalsfor computation
 of the course of computer science at PUC Minas campus Poços de Caldas.
 
-# para compilar:
+# to compile:
  gcc main2.c -o main2
